@@ -60,6 +60,24 @@ public class LoginController implements Initializable{
     }
 
     //Register a new user
+    @FXML
+    public void SignUp(ActionEvent event){
+        Stage stage = (Stage) this.signupBtn.getScene().getWindow();
+        stage.close();
+
+        Stage homeStage = new Stage();
+        try {
+            Scene scene = new Scene(FXMLLoader.load(getClass().getResource("/signup/SignUp.fxml")));
+
+            homeStage.setScene(scene);
+            homeStage.setTitle("Home Page");
+            homeStage.setResizable(false);
+            homeStage.show();
+            
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
     public void homePage(){
 
@@ -76,5 +94,4 @@ public class LoginController implements Initializable{
             e.printStackTrace();
         }
     }
-    
 }

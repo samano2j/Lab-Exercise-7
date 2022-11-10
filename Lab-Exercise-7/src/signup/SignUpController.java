@@ -17,7 +17,7 @@ import javafx.stage.Stage;
 
 
 public class SignUpController implements Initializable {
-    SignUpModel signUpModel = new SignUpModel();
+    SignUpModel signUpModel = null;
 
     @FXML
     private TextField username;
@@ -28,8 +28,27 @@ public class SignUpController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        // TODO Auto-generated method stub
-        
+        this.signUpModel = new SignUpModel();  
+    }
+
+    @FXML
+    public void SignUp(ActionEvent event){
+        signUpModel.signUp(this.username.getText(), this.password.getText());
+
+        Stage stage = (Stage) this.signupBtn.getScene().getWindow();
+        stage.close();
+
+        Stage homeStage = new Stage();
+        try {
+            Scene scene = new Scene(FXMLLoader.load(getClass().getResource("/login/Login.fxml")));
+
+            homeStage.setScene(scene);
+            homeStage.setTitle("Login Page");
+            homeStage.show();
+            
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
 }

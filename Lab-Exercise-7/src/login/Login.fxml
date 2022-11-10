@@ -8,9 +8,9 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="430.0" prefWidth="690.0" stylesheets="@../resources/css/application.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="login.LoginController">
+<AnchorPane id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="430.0" prefWidth="690.0" stylesheets="@../resources/css/application.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="login.LoginController">
    <children>
-      <Pane id="login" layoutX="89.0" layoutY="82.0" prefHeight="267.0" prefWidth="512.0" stylesheets="@../resources/css/application.css">
+      <Pane id="login" layoutX="89.0" layoutY="82.0" prefHeight="325.0" prefWidth="506.0" stylesheets="@../resources/css/application.css">
          <children>
             <TextField fx:id="username" layoutX="100.0" layoutY="60.0" prefHeight="40.0" prefWidth="290.0" />
             <PasswordField fx:id="password" layoutX="102.0" layoutY="119.0" prefHeight="40.0" prefWidth="290.0" />
@@ -20,7 +20,8 @@
                   <Font name="SansSerif Bold" size="20.0" />
                </font>
             </Label>
-            <Label fx:id="loginStatus" layoutX="112.0" layoutY="239.0" prefHeight="16.0" prefWidth="268.0" textFill="WHITE">
+            <Button fx:id="signupBtn" layoutX="103.0" layoutY="240.0" mnemonicParsing="false" onAction="#SignUp" prefHeight="40.0" prefWidth="290.0" text="SIGN UP" />
+            <Label fx:id="loginStatus" layoutX="119.0" layoutY="296.0" prefHeight="16.0" prefWidth="268.0" textFill="WHITE">
                <font>
                   <Font name="SansSerif Bold" size="13.0" />
                </font>
