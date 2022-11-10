@@ -22,11 +22,9 @@ public class SignUpController implements Initializable {
     @FXML
     private TextField username;
     @FXML
-    private PasswordField password;
+    private TextField password;
     @FXML
     private Button signupBtn;
-    @FXML
-    private Label loginStatus;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
